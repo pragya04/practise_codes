@@ -26,7 +26,7 @@
             num = all_nums[k];
             if(isValidPosition(board, i, j, num)) {
               board[i][j] = num;
-              if(solved) {
+              if(solved(board)) {
                 return true;
               } else {
                 board[i][j] = 0;
@@ -69,6 +69,7 @@
         }
       }
     }
+    return true;
   }
 
   var board = [[]]; //2d array
