@@ -22,13 +22,12 @@ function solve (board) {
 										if(isValidPosition(board, i, j, num)) {
 												board[i][j]=num;
                         // recursively check if the board is solved with this num
-                        if (solved(board)){
-                            return true;
+                        if(solved(board)) {
+                          return true;
+                        } else {
+                          board[i][j]=0;
                         }
-                        else{
-                            board[i][j] = 0;
-                        }
-										}
+                    }
 								}
                 return false;
 
