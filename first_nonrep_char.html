@@ -1,0 +1,28 @@
+<head>
+<title>Your Page Title</title>
+<script type="text/javascript" >
+function firstNonRepeatChar (str) {
+  var hashMap = [];
+  for(var i in str) {
+    var char = str[i];
+    if(char != ' ') {
+      if(char in hashMap) {
+        hashMap[char] = hashMap[char] + 1;
+      }else {
+        hashMap[char] = 1 ;
+      }
+    }
+  }
+
+  for(var k in str) {
+    var chr = str[k];
+    if(hashMap[chr] == 1) {
+      return chr;
+    }
+  }
+}
+
+
+console.log(firstNonRepeatChar('the quick brown fox jumps then quickly blow air'))
+</script>
+</head>

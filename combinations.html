@@ -1,0 +1,18 @@
+<head>
+<script type="text/javascript" >
+var combinations = [];
+function getCombinations(chars) {
+  var result = [];
+  var f = function(prefix, chars) {
+    for (var i = 0; i < chars.length; i++) {
+      result.push(prefix + chars[i]);
+      f(prefix + chars[i], chars.slice(i + 1));
+    }
+  }
+  f('', chars);
+  return result;
+}
+var combinations = getCombinations(["a", "b", "c", "d"]);
+console.log(combinations);
+</script>
+</head>

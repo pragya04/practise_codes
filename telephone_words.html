@@ -1,0 +1,18 @@
+<head>
+<script type="text/javascript" >
+var combinations = [];
+function printTelephoneWords(phoneNumber) {
+  var str = '';
+  getTelephoneWords(phoneNumber, 0, str)
+}
+
+function getTelephoneWords(num, digit, result) {
+  for(var i=0;i<=3;i++) {
+    result += getCharCode(num[digit], i);
+    getTelephoneWords(num, digit+1, result);
+  }
+}
+var telephoneWords = printTelephoneWords('8662665');
+console.log(telephoneWords);
+</script>
+</head>

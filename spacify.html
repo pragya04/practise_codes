@@ -1,0 +1,26 @@
+<head>
+<title>Your Page Title</title>
+<script type="text/javascript" >
+function spacify () {
+	var str = "hello world";
+	var opstr = '';
+	for(var i in str) {
+		opstr += expand(str[i])
+	}
+	console.log(opstr);
+}
+
+function expand (char) {
+	if(char !== ' ' ) {
+		return char + ' ';
+	}
+	return char;
+}
+spacify();
+
+/*Optional:
+function spacify(str) {
+  return str.split('').join(' ');
+}*/
+</script>
+</head>

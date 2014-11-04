@@ -1,0 +1,18 @@
+<head>
+<script type="text/javascript" >
+
+function replace_str(str, remove_char, add_char) {
+  var newStr = '';
+  for(var i = 0;i < str.length; i++) {
+    if(str[i] == remove_char) {
+      newStr +=add_char;
+    } else {
+      newStr +=str[i];
+    }
+  }
+  return newStr;
+}
+
+console.log(replace_str('you are a good girl', ' ', '%20'));
+</script>
+</head>

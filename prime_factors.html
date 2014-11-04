@@ -1,0 +1,20 @@
+<head>
+<title>Your Page Title</title>
+<script type="text/javascript" >
+function prime (n) {
+  var factors = [], divisor = 2;
+  while(divisor < n) {
+      if(n%divisor == 0) {
+        factors.push(divisor);
+
+      } else {
+        divisor++;
+      }
+  }
+  return factors;
+}
+
+prime(69); //3,23
+
+</script>
+</head>

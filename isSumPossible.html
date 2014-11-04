@@ -1,0 +1,27 @@
+<head>
+<title>Your Page Title</title>
+<script type="text/javascript" >
+function isSumPossible(a, check_num) {
+    var hashMap = {};
+    for(var i in a) {
+        var num = a[i];
+        if(num in hashMap) {
+            hashMap[num]++;
+        } else {
+          hashMap[num] = 1;
+        }
+    }
+    var diff;
+    for(var j in a) {
+      diff = check_num - a[j];
+        if(diff in hashMap) {
+            return 1;
+        }
+    }
+    return 0;
+}
+var arr = [4,5,7,7,3];
+
+console.log(isSumPossible(arr, 10));
+</script>
+</head>

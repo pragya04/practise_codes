@@ -1,0 +1,36 @@
+<head>
+<title>Your Page Title</title>
+<script type="text/javascript" >
+function reverse_polish_notation (arr) {
+  var stack = [];
+  for(var i in arr) {
+    var ch = arr[i], val;
+    if(is_operand(ch)) {
+      // pop last 2 operands from top of the stack
+      val1 = stack.pop();
+    } else {
+      stack.push(ch);
+    }
+    console.log(stack);
+    console.log(val);
+  }
+}
+
+function is_operand(char) {
+  switch(char) {
+    case "+":
+    case "-":
+    case "*":
+    case "/":
+      return true
+    default:
+      return false;
+  }
+}
+var arr = ["2", "1", "+", "3", "*"];
+
+//(2+1)*3 = 9
+reverse_polish_notation(arr);
+
+</script>
+</head>
