@@ -2,7 +2,7 @@
 <head>
 <title>Your Page Title</title>
 <script type="text/javascript" >
-//Let's solve a game of Sudoku. Given a 9x9 2-D int array containing digits 0-9 (with 0 being unsolved squares), returning true if there is at least one solution (and writing the solution into the 2D array) and false if there isn't.
+// Let's solve a game of Sudoku. Given a 9x9 2-D int array containing digits 0-9 (with 0 being unsolved squares), returning true if there is at least one solution (and writing the solution into the 2D array) and false if there isn't.
 function solve (board) {
 		var i,j, visited_nums_array, num, all_nums = [1,2,3,4,5,7,8,9];
 
@@ -20,14 +20,13 @@ function solve (board) {
 								for(var k in all_nums) {
 										num = all_nums[k];
 										if(isValidPosition(board, i, j, num)) {
-												board[i][j]=num;
-                        // recursively check if the board is solved with this num
-                        if(solved(board)) {
+												board[i][j] = num;
+                        if(solved) {
                           return true;
                         } else {
-                          board[i][j]=0;
+                          board[i][j] = 0;
                         }
-                    }
+										}
 								}
                 return false;
 
@@ -38,7 +37,7 @@ function solve (board) {
 
 }
 
-function isValidPosition (board, row, col, n) {
+function isValid (board, row, col, n) {
   //checking each column
   for(var i = 0; i < 9; i++ ) {
     if(board[i][col] == n) {
